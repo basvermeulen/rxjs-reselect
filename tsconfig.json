@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "dist",
+    "declaration": true,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es6",
+      "es2015",
+      "dom"
+    ],
+    "sourceMap": true,
+    "pretty": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitUseStrict": false,
+    "noFallthroughCasesInSwitch": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules"
+    ],
+    "types": []
+  },
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "built",
+    "node_modules",
+    "results"
+  ]
+}
