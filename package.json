@@ -1,11 +1,14 @@
 {
   "name": "rxjs-reselect",
   "description": "Adds NGRX like select functionality to a regular Redux store",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "homepage": "",
   "author": {
     "name": "Bas Vermeulen",
     "email": "bas.vermeulen89@gmail.com"
+  },
+  "license": {
+    "type": "MIT"
   },
   "contributors": [],
   "repository": {

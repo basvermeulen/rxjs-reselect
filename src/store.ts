@@ -25,8 +25,10 @@ export class Store<T> extends Observable<T> {
     }
 
     select<R>(mapFn: (state: T) => R): Observable<R> {
-        const mapped$ = map.call(this, mapFn);
-        return distinctUntilChanged.call(mapped$);
+        return this.pipe(
+            map(mapFn),
+            distinctUntilChanged()
+        );
     }
 
 }
