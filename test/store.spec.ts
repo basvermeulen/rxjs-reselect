@@ -3,10 +3,8 @@ import { expect } from 'chai';
 import * as sinon from 'sinon';
 import rewiremock, { plugins } from 'rewiremock';
 
-import { Subscription } from 'rxjs/Subscription';
+import { Observable, Subscription, EMPTY } from 'rxjs';
 import { Action, createStore as createReduxStore, Store as ReduxStore } from 'redux';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/empty';
 import { Store } from '../src/store';
 
 describe('store', () => {
@@ -44,10 +42,9 @@ describe('store', () => {
             (mock) => {
                 mock.addPlugin(plugins.nodejs);
                 if (withMockedObservable) {
-                    mock('rxjs/Observable').with(observable);
+                    mock('rxjs').with(observable);
                 }
-                mock('rxjs/operator/map').with({map});
-                mock('rxjs/operator/distinctUntilChanged').with({distinctUntilChanged});
+                mock('rxjs/operators').with({map, distinctUntilChanged});
             }
         )
         .then(result => result)
@@ -96,7 +93,7 @@ describe('store', () => {
         describe('select method', () => {
             it('should call map\'s and distinctUntilChanged\'s call', () => {
                 const fn = () => {};
-                const emptyObservable = Observable.empty();
+                const emptyObservable = EMPTY;
                 map.call.returns(emptyObservable);
 
                 instance.select(fn);

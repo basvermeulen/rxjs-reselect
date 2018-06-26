@@ -1,7 +1,7 @@
 {
   "name": "rxjs-reselect",
   "description": "Adds NGRX like select functionality to a regular Redux store",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "",
   "author": {
     "name": "Bas Vermeulen",
@@ -32,7 +32,7 @@
   ],
   "peerDependencies": {
     "redux": "~3.7.2",
-    "rxjs": "^5.5.0"
+    "rxjs": "^6.2.1"
   },
   "devDependencies": {
     "@types/chai": "^4.1.2",
@@ -42,7 +42,7 @@
     "mocha": "^5.0.5",
     "redux": "~3.7.2",
     "rewiremock": "^3.6.0",
-    "rxjs": "^5.5.0",
+    "rxjs": "^6.2.1",
     "sinon": "^4.4.10",
     "ts-node": "^6.1.1",
     "tslint": "^5.9.1",

@@ -1,9 +1,7 @@
-import { Observable } from 'rxjs/Observable';
+import { Observable, Subscription, PartialObserver } from 'rxjs';
+import { distinctUntilChanged, map } from 'rxjs/operators';
+
 import { Action, Dispatch, Store as ReduxStore } from 'redux';
-import { Subscription } from 'rxjs/Subscription';
-import { PartialObserver } from 'rxjs/src/Observer';
-import { map } from 'rxjs/operator/map';
-import { distinctUntilChanged } from 'rxjs/operator/distinctUntilChanged';
 
 export class Store<T> extends Observable<T> {
 
